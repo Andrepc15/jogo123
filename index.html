@@ -20,6 +20,12 @@
         }
         p, input, button {
             color: black;
+            border-radius: 2px;
+        }
+        #message{
+            color: white;
+            text-align:center;
+            margin: 1vh;
         }
         .container {
             margin-top: 20px;
@@ -33,7 +39,7 @@
 </head>
 <body>
     <h1>Adivinhe o Número</h1>
-    <p>Estou pensando em um número entre 1 e 100. Tente adivinhar qual é!</p>
+    <p>Estou pensando em um número entre 1 e 20. Tente adivinhar qual é!</p>
     <div class="container">
         <input type="text" id="guess" placeholder="Insira seu palpite">
         <button onclick="checkGuess()">Palpite</button>
@@ -42,7 +48,7 @@
 
     <script>
         // Gerar um número aleatório entre 1 e 10
-        const randomNumber = Math.floor(Math.random() * 100) + 1;
+        const randomNumber = Math.floor(Math.random() * 10) + 1;
         let attempts = 0;
 
         function checkGuess() {
@@ -54,7 +60,16 @@
                 attempts++;
 
                 if (guess === randomNumber) {
-                    document.getElementById("message").textContent = `Parabéns! Você acertou em ${attempts} tentativas.`;
+                    document.getElementById("message").textContent = `Então hoje se completam 2 meses que estamos juntos :) 
+                    Bem eu tinha escrito uma carta para te entregar na sua colação , para você ler hoje.
+                    Mas acabei saindo correndo e não consegui levar. Mas eu queria agradecer por tudo , por cada mensagem , momento que passamos juntos ,
+                    por ser essa mulher que eu admiro e gosto tanto . Uma vez você comentou sobre relacionamentos e bem saiba que você é a minha primeira namorada
+                    e o que depender de mim para dar certo eu farei , estou orando todo dia pela sua vida e de sua familia e agradeço a Deus todas as noite , antes de deitar,
+                    por você ter aparecido num momento em que eu menos esperava mas que foi o maior presente que eu tive esse ano !!! Esse é o resumo da carta , no dia 24/12 
+                    você vai conseguir ler o restante . Mas fica aqui as minhas palavras , tinha planejado ir ai nesse dia mais acabou que comecei a trabalhar e tive de pensar e reajustar tudo
+                    mas então é isso 🌹!!
+                    Com carinho André
+                    `;
                 } else if (guess < randomNumber) {
                     document.getElementById("message").textContent = "Tente um número maior.";
                 } else {
